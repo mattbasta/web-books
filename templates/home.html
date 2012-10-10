@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Web Books</title>
+        <meta name="description" content="Make your books into apps">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-responsive.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="{{ url_for('static', filename='js/vendor/html5shiv.js') }}"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">Web Books</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                            <li><a href="#create">Create Your Own</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="hero-unit">
+                <h1>Books on Devices</h1>
+                <p>Put your books in the hands of smartphone and tablet users everywhere.</p>
+            </div>
+
+            <!-- Example row of columns -->
+            <div class="row" id="about">
+                <div class="span4">
+                    <h2>Open Standards</h2>
+                    <p>Your books are put into open formats that are powered by open source software.</p>
+                </div>
+                <div class="span4">
+                    <h2>Cross-Platform</h2>
+                    <p>Web Books work anywhere that Firefox works: smartphones, tablets, and desktop computers. Your books will look slick on every screen size.</p>
+                </div>
+                <div class="span4">
+                    <h2>Free to Use</h2>
+                    <p>It doesn't cost anything to convert your books. There are no fees or licensing costs.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div id="demo">
+                <h1>Alice in Wonderland <small>Demo</small></h1>
+                <a href="/demo/aiw" class="btn btn-primary">View Online</a>
+            </div>
+
+            <hr>
+
+            <div id="create">
+                <h1>Create Your Own</h1>
+                <p>Creating your own web book is easy. Just enter some basic information about your book and attach a PDF version of its content and we'll give you back an app.</p>
+                <form action="post" method="/upload" enctype="multipart/form-data" class="form form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="title">Book Title</label>
+                        <div class="controls">
+                            <input type="text" name="title" placeholder="Alice in Wonderland" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="author">Author</label>
+                        <div class="controls">
+                            <input type="text" name="author" placeholder="Lewis Carroll" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="upload">Book PDF</label>
+                        <div class="controls">
+                            <input type="file" name="upload" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <footer>
+                <p>&copy; Mozilla 2012</p>
+            </footer>
+
+        </div> <!-- /container -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/vendor/jquery-1.8.2.min.js') }}"><\/script>')</script>
+
+        <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </body>
+</html>
