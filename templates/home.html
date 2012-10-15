@@ -42,14 +42,7 @@
 
         <div class="container">
 
-            <!-- Main hero unit for a primary marketing message or call to action -->
-            <div class="hero-unit">
-                <h1>Books on Devices</h1>
-                <p>Put your books in the hands of smartphone and tablet users everywhere.</p>
-            </div>
-
-            <!-- Example row of columns -->
-            <div class="row" id="about">
+            <!--<div class="row" id="about">
                 <div class="span4">
                     <h2>Open Standards</h2>
                     <p>Your books are put into open formats that are powered by open source software.</p>
@@ -62,21 +55,12 @@
                     <h2>Free to Use</h2>
                     <p>It doesn't cost anything to convert your books. There are no fees or licensing costs.</p>
                 </div>
-            </div>
-
-            <hr>
-
-            <div id="demo">
-                <h1>Alice in Wonderland <small>Demo</small></h1>
-                <a href="/demo/aiw" class="btn btn-primary">View Online</a>
-            </div>
-
-            <hr>
+            </div>-->
 
             <div id="create">
                 <h1>Create Your Own</h1>
                 <p>Creating your own web book is easy. Just enter some basic information about your book and attach a PDF version of its content and we'll give you back an app.</p>
-                <form action="post" method="/upload" enctype="multipart/form-data" class="form form-horizontal">
+                <form action="/upload" method="post" enctype="multipart/form-data" class="form form-horizontal">
                     <div class="control-group">
                         <label class="control-label" for="title">Book Title</label>
                         <div class="controls">
@@ -95,7 +79,17 @@
                             <input type="file" name="upload" />
                         </div>
                     </div>
+                    <div class="form-actions">
+                        <input type="submit" class="btn primary" value="Generate" />
+                    </div>
                 </form>
+            </div>
+
+            <hr>
+
+            <div id="demo">
+                <h1>Alice in Wonderland <small>Demo</small></h1>
+                <a href="/demo/aiw" class="btn btn-primary">View Online</a>
             </div>
 
             <footer>

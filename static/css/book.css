@@ -30,6 +30,7 @@ body {
     background: #ccc;
     background: -webkit-linear-gradient(top, #bbb 0%,#ddd 96%,#999 98%); /* Chrome10+,Safari5.1+ */
     background: linear-gradient(to bottom, #bbb 0%,#ddd 96%,#999 98%); /* W3C */
+    border-bottom: 1px solid #bbb;
     box-shadow: 0 0 5px 2px #000;
     margin: 0 0 2em;
     padding: 0.5em;
@@ -45,11 +46,11 @@ body {
     font-weight: normal;
 }
 
-article {
+#book {
     margin: 0 auto;
 }
 
-article #cover {
+#book #cover {
     background-color: #026873;
     background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%), linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%), linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
     background-image: -webkit-linear-gradient(0deg, rgba(255, 255, 255, .07) 50%, transparent 50%), -webkit-linear-gradient(0deg, rgba(255, 255, 255, .13) 50%, transparent 50%), -webkit-linear-gradient(0deg, transparent 50%, rgba(255, 255, 255, .17) 50%), -webkit-linear-gradient(0deg, transparent 50%, rgba(255, 255, 255, .19) 50%);
@@ -57,15 +58,28 @@ article #cover {
     box-shadow: rgba(255,255,255,0.5) 0px 2px 3px 1px inset, rgba(0, 0, 0, 0.298039) 0px -7px 1px 2px inset;
     text-align: center;
 }
-article #cover * {
+#book #cover * {
     text-shadow: 0 1px 0 #BBB,
                  0 2px 0 #BBB,
                  0 3px 0 #BBB,
                  0 3px 5px black;
 }
-article #cover h1 {
+#book #cover h1 {
     color: #fff;
     font-family: sans-serif;
     font-size: 2.5em;
     padding: 2em 3ex 0;
+}
+
+#book .page {
+    background: #FAF3E3;
+}
+#book .page .textwrap {
+    padding: 1em;
+    line-height: 1.3em;
+}
+
+#book.textual .cover {
+    height: 380px;
+    margin: 0 1em;
 }

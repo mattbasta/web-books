@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="/static/css/book.css">
+        <link rel="stylesheet" href="/static/css/bastaflip.css?2">
     </head>
     <body data-pdf="{{ pdf }}">
 
@@ -18,8 +19,8 @@
 
         <div class="container">
 
-            <article id="book">
-                <div id="cover" class="hard"><h1>{{ title }}</h1></div>
+            <article id="book" class="book">
+                <div id="cover" class="cover"><h1>{{ title }}</h1></div>
             </article>
 
         </div> <!-- /container -->
@@ -27,12 +28,12 @@
         <script type="text/javascript" src="/static/js/vendor/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" src="/static/js/pdf.js"></script>
         <script type="text/javascript">
-            // Specify the main script used to create a new PDF.JS web worker.
-            // In production, change this to point to the combined `pdf.js` file.
-            PDFJS.workerSrc = '/static/js/pdf.js';
-          </script>
-        <script type="text/javascript" src="/static/js/turn.min.js"></script>
+        // Specify the main script used to create a new PDF.JS web worker.
+        // In production, change this to point to the combined `pdf.js` file.
+        PDFJS.workerSrc = '/static/js/pdf.js';
+        </script>
         <script type="text/javascript" src="/static/js/grommet.js"></script>
+        <script type="text/javascript" src="/static/js/bastaflip.js"></script>
         <script type="text/javascript" src="/static/js/book.js"></script>
     </body>
 </html>
